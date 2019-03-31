@@ -21,12 +21,14 @@
 			var curTop = div.scrollTop;
 			var down;
 			var d = 1000;
+			//m:数据 v:视图
 			setInterval(function () {
-				if (curTop != div.scrollTop) {
-					if (curTop - 0.1 < div.scrollTop) {
+				var b = down ? curTop + 0.1 : curTop - 0.1;  
+				if (b != div.scrollTop) {
+					if (b < div.scrollTop) {
 						down = true;
 					}
-					if (curTop + 0.1 > div.scrollTop) {
+					if (b > div.scrollTop) {
 						down = false;
 					}
 				}
