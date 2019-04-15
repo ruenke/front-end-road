@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自适应</title>
+    <style>
+        .hv {
+            width: 7.5rem;
+            height: 6.25rem;
+            border: 1px solid red;
+        }
+    </style>
+    <!-- <script src="../../js/public.js"></script> -->
+    <script>
+        window.onload = function () {
+            if (window.devicePixelRatio > 1) {
+                // 获取html节点
+                var html = document.getElementsByTagName('html')[0];
+                // 获取屏幕宽度
+                var pageWidth = html.getBoundingClientRect().width;
+                console.log(pageWidth);
+                // 屏幕宽度 / 固定数值 = 基准值
+                html.style.fontSize = pageWidth / 37.5 + "px";
+            } else {
+                var html = document.getElementsByTagName('html')[0];
+                // 获取屏幕宽度
+                html.style.maxWidth = 768 + 'px';
+                html.style.fontSize = 20.48 + "px";
+                html.style.margin = "0 auto";
+            }
+        }
+        window.onresize = function () {
+            if (window.devicePixelRatio == 1) {
+                document.getElementsByTagName('body')[0].style.maxWidth = "640px"
+                window.location.reload()
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="hv">hello world!</div>
+</body>
+
+</html>
