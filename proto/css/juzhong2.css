@@ -1,0 +1,19 @@
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000000;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.mrys {
+    background-color: green;
+}
+
+.kg {
+    width: 40px;
+}
+
+.jz-ele {
+    margin: auto;
+}

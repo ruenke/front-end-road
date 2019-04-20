@@ -1,0 +1,25 @@
+
+
+.box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000000;
+    background-color: red;
+}
+
+.mrys {
+    height: 40px;
+    width: 40px;
+    background-color: green;
+}
+
+.jz-ele {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
