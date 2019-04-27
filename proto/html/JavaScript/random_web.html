@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>随机访问网页</title>
+    <style>
+        #dome {
+            width: 30px;
+            height: 15px;
+            background: orange;
+            
+        }
+    </style>
+    <script>
+        var r = Math.random();
+        var x = "";
+        if (r>0.5){
+            x.innerHTML = "<a href = 'https://baidu.com'></a>";
+        }else {
+            x.innerHTML = "<a href = 'https://sina.com'>";
+        }
+    </script>
+</head>
+<body>
+    <input type = "button" value="按钮" id="dome"></p>
+</body>
+</html>
