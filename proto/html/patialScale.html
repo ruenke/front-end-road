@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../js/hammer.min.js"></script> 
+  <title>局部缩放测试</title>
+  <style>
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    } 
+   
+    #container {
+      width: 2000px;
+      height: 200px;
+      background: #000;
+      color: white;
+      overflow: scroll;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <script>
+    const el = document.getElementById('container')
+    const hammertime = new Hammer(el,{domEvents: true})
+    hammertime.get('pinch').set({ enable: true })
+    hammertime.on('pinch', ({ scale,prevent }) => {
+      el.innerText = `放大倍数${scale}`
+      el.style.transform = `scale(${scale})`
+    });
+    hammertime.on("panleft panright tap press", function(ev) {
+      el.textContent = ev.type +"gesture detected.123456789"+ Math.random();
+      ev.preventDefault(false);
+    });
+  </script>
+</body>
+</html>

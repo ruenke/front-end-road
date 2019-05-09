@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/detectZoom.js"></script>
+    <script>
+        onload = function () {
+            console.log(detectZoom());
+        }
+        window.onresize = function () {
+            let s = detectZoom() / 2;
+            console.log(s);
+            document.body.style.zoom = 1 / s;
+        }
+    </script>
+</head>
+
+<body>
+    <div>hello world!!!</div>
+</body>
+
+</html>
