@@ -11,9 +11,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
-//监控-why
-const WatcherPlugin = require('@mfs/watcher')
-
 // const env = require('../config/prod.env')
 
 const argv = require('optimist').argv;
@@ -25,7 +22,6 @@ if (argv.buildEnv === 'test') {
 } else {
   env = require('../config/prod.env');
 }
-console.log("process",env.LARK_APPID);
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -87,11 +83,6 @@ const webpackConfig = merge(baseWebpackConfig, {
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
-    }),
-    //监控-why
-    new WatcherPlugin({
-      project: 'lingxi_h5',
-      env: 'production'
     }),
     // keep module.id stable when vendor modules does not change
     new webpack.HashedModuleIdsPlugin(),

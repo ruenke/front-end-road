@@ -1,8 +1,8 @@
 {
-  "name": "h5-idas",
+  "name": "vue-project",
   "version": "1.0.0",
-  "description": "智能分析系统-h5",
-  "author": "wang huiyan <wanghy04@missfresh.cn>",
+  "description": "vue项目",
+  "author": "wxp",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

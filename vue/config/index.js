@@ -1,6 +1,5 @@
 'use strict'
 // Template version: 1.3.1
-// see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
 
@@ -12,10 +11,6 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api':{
-        // target: 'http://172.16.184.94:8080',
-        target: 'http://h5-idas-test.missfresh.net',
-        // target: 'http://172.16.185.62:8080',
-        
         changeOrigin: true,  //是否跨域
         pathRewrite: {
           '^/api': '/api'   //重写接口
@@ -25,7 +20,7 @@ module.exports = {
     },
 
     // Various Dev Server settings
-    host: '172.16.187.119', // can be overwritten by process.env.HOST http://172.16.187.119
+    host: '192.168.8.237', // can be overwritten by process.env.HOST http://172.16.187.119
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
