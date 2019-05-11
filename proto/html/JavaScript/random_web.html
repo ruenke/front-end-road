@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,29 @@
             width: 50px;
             height: 25px;
             background: red;
+            cursor: pointer;
+            text-align: center;
         }
     </style>
     <script>
-        var r = Math.random();
-        var x = "";
-        if (r>0.5){
-            x.innerHTML = "<a href = 'https://baidu.com'></a>";
-        }else {
-            x.innerHTML = "<a href = 'https://sina.com'>";
+        function ran() {
+            var r = Math.random();
+            var x = document.getElementById("dome");
+          
+            if (r > 0.5) {
+                 x.href = 'https://www.baidu.com/';               
+            } else {
+                x.href = 'https://www.sina.com/';     
+            }
         }
+
     </script>
 </head>
+
 <body>
-    <input type = "button" value="按钮" id="dome"></p>
+    <a id="dome" href='' onclick ="ran()">按钮</a>
+   
 </body>
+
 </html>
+

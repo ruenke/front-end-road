@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        select {
+            width: 300px;
+            height: 30px;
+            display: block;
+            margin-top: 20px;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function getSelectedValue(id) {
+            var select = document.getElementById(id);
+            var index = select.selectedIndex;
+            // var text = select.options[index].text; // 选中文本
+            var value = select.options[index].value; // 选中值
+            // console.log(select,index,text,value);
+            return value;
+        }
+        function enter() {
+            var passValue = getSelectedValue("passValue");
+            if (passValue == "") {
+                alert("請選擇是否通過");
+                return;
+            } else if (passValue == "notPass") {
+                var reason = getSelectedValue("reason");
+                if (reason == "") {
+                    alert("请选择不通过的原因");
+                    return;
+                }
+            }
+            alert("跳转");
+
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <select name="" id="passValue">
+            <option selected="selected" disabled="disabled" style='display: none' value=''></option>
+            <option value="pass">通过</option>
+            <option value="notPass">不通过</option>
+        </select>
+        <select name="" id="reason">
+            <option selected="selected" disabled="disabled" style='display: none' value=''></option>
+            <option value="politics">政治</option>
+            <option value="eroticism">色情</option>
+            <option value="violence">暴力</option>
+        </select>
+        <button id="enter" onclick="enter()">跳转</button>
+    </div>
+</body>
+
+</html>
