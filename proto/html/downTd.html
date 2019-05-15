@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>down td</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        tr {
+            height: 50px;
+            border: 1px solid green;
+        }
+
+        td {
+            border: 0px solid green;
+            height: 50px;
+        }
+
+        td:nth-child(2) {
+            position: relative;
+            width: 5%;
+            border: 0;
+        }
+
+        td div {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+        }
+
+        div:nth-child(1) {
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        div:nth-child(2) {
+            left: 50%;
+            top: 0;
+            border-left: 1px solid red;
+            border-bottom: 1px solid red;
+        }
+
+        div:nth-child(3) {
+            left: 0;
+            top: 50%;
+            display: none;
+        }
+
+        div:nth-child(4) {
+            left: 50%;
+            top: 50%;
+            border-left: 1px solid red;
+        }
+        tr:first-child td div:first-child {
+            display: block;
+            border-bottom: 1px solid red;
+        }
+        tr:first-child td div:nth-child(2) {
+            display: block;
+            border-left: 0;
+        }
+        tr:last-child td div:nth-child(4) {
+            border-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>123</td>
+            <td>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </td>
+            <td>123</td>
+            <td>123</td>
+            <td>123</td>
+            <td>123</td>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </td>
+            <td>123</td>
+            <td>123</td>
+            <td>123</td>
+            <td>123</td>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </td>
+            <td>123</td>
+            <td>123</td>
+            <td>123</td>
+            <td>123</td>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </td>
+            <td>123</td>
+            <td>123</td>
+            <td>123</td>
+            <td>123</td>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </td>
+            <td>123</td>
+            <td>123</td>
+            <td>123</td>
+            <td>123</td>
+        </tr>
+        <tr>
+                <td>123</td>
+                <td>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </td>
+                <td>123</td>
+                <td>123</td>
+                <td>123</td>
+                <td>123</td>
+            </tr>
+            <tr>
+                    <td>123</td>
+                    <td>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </td>
+                    <td>123</td>
+                    <td>123</td>
+                    <td>123</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                        <td>123</td>
+                        <td>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                            <td>123</td>
+                            <td>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                        </tr>
+    </table>
+</body>
+
+</html>

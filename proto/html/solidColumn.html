@@ -8,15 +8,14 @@
     <title>Document</title>
     <style>
         .table {
-            position: absolute;
-            left: 100px;
-            top: 100px;
+            position: relative;
             width: 100%;
             overflow-x: scroll;
             background-color: #7c95b5;
         }
 
         .fixedTable {
+            position: relative;
             width: 160%;
             text-align: center;
             color: #fff;
@@ -25,31 +24,23 @@
         }
 
         .fixedTable tr {
+            position: relative;
+
             line-height: 30px;
             border: 1px solid #fff;
         }
 
         .fixedTable tr:first-child {
-            position: absolute;
-            left: 0;
-            top:0;
             height: 40px;
             line-height: 40px;
             background-color: cadetblue;
         }
 
-        .fixedTable td:nth-child(1) {
+        .fixedTable td:first-child {
             position: absolute;
-            left: 0;
+            /* left: 0; */
+            /* top: 20px; */
             width: 105px;
-            background-color: cadetblue;
-            border: 1px solid #fff;
-            margin: -1px 0px 0px -1px;
-        }
-        .fixedTable td:nth-child(2) {
-            position: absolute;
-            width: 105px;
-            left: 105px;
             background-color: cadetblue;
             border: 1px solid #fff;
             margin: -1px 0px 0px -1px;
@@ -59,24 +50,19 @@
             width: 99px;
         }
     </style>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <meta charset="utf-8">
+    <title>使用css固定table第一列</title>
+    <link href="css/table.css" rel="stylesheet">
 </head>
 
 <body>
-    <html>   
-
-    <head>       
-        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
-        <meta charset="utf-8">
-        <title>使用css固定table第一列</title>
-        <link href="css/table.css" rel="stylesheet" />
-    </head>
-
-    <body>
-        <div class="table">
-            <table class="fixedTable" border="1">  
+    <div class="table">
+        <table class="fixedTable" border="1">
+            <tbody>
                 <tr>
                     <td>固定列</td>
-                    <td class="fixedColumn">111</td>
+                    <td class="fixedColumn"></td>
                     <td>第一列</td>
                     <td>第二列</td>
                     <td>第三列</td>
@@ -84,7 +70,7 @@
                     <td>第五列</td>
                     <td>第六列</td>
                     <td>第七列</td>
-                </tr> 
+                </tr>
                 <tr>
                     <td>固定列</td>
                     <td class="fixedColumn"></td>
@@ -95,7 +81,117 @@
                     <td>5</td>
                     <td>6</td>
                     <td>7</td>
-                </tr> 
+                </tr>
+                <tr>
+                    <td>固定列</td>
+                    <td class="fixedColumn"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>固定列</td>
+                    <td class="fixedColumn"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>固定列</td>
+                    <td class="fixedColumn"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>固定列</td>
+                    <td class="fixedColumn"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>固定列</td>
+                    <td class="fixedColumn"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>固定列</td>
+                    <td class="fixedColumn"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>固定列</td>
+                    <td class="fixedColumn"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>固定列</td>
+                    <td class="fixedColumn"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>固定列</td>
+                    <td class="fixedColumn"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>固定列</td>
+                    <td class="fixedColumn"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
                 <tr>
                     <td>固定列</td>
                     <td class="fixedColumn"></td>
@@ -238,40 +334,7 @@
                     <td>5</td>
                     <td>6</td>
                     <td>7</td>
-                </tr>         
-                  <tr>
-                    <td>固定列</td>
-                    <td class="fixedColumn"></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>       
-                    <tr>
-                    <td>固定列</td>
-                    <td class="fixedColumn"></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>       
-                    <tr>
-                    <td>固定列</td>
-                    <td class="fixedColumn"></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>     
+                </tr>
                 <tr>
                     <td>固定列</td>
                     <td class="fixedColumn"></td>
@@ -282,29 +345,7 @@
                     <td>5</td>
                     <td>6</td>
                     <td>7</td>
-                </tr>       
-                    <tr>
-                    <td>固定列</td>
-                    <td class="fixedColumn"></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>         
-                  <tr>
-                    <td>固定列</td>
-                    <td class="fixedColumn"></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>     
+                </tr>
                 <tr>
                     <td>固定列</td>
                     <td class="fixedColumn"></td>
@@ -315,7 +356,7 @@
                     <td>5</td>
                     <td>6</td>
                     <td>7</td>
-                </tr>     
+                </tr>
                 <tr>
                     <td>固定列</td>
                     <td class="fixedColumn"></td>
@@ -326,7 +367,7 @@
                     <td>5</td>
                     <td>6</td>
                     <td>7</td>
-                </tr>     
+                </tr>
                 <tr>
                     <td>固定列</td>
                     <td class="fixedColumn"></td>
@@ -337,18 +378,7 @@
                     <td>5</td>
                     <td>6</td>
                     <td>7</td>
-                </tr>       
-                    <tr>
-                    <td>固定列</td>
-                    <td class="fixedColumn"></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>     
+                </tr>
                 <tr>
                     <td>固定列</td>
                     <td class="fixedColumn"></td>
@@ -359,40 +389,7 @@
                     <td>5</td>
                     <td>6</td>
                     <td>7</td>
-                </tr>       
-                    <tr>
-                    <td>固定列</td>
-                    <td class="fixedColumn"></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>       
-                    <tr>
-                    <td>固定列</td>
-                    <td class="fixedColumn"></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>       
-                    <tr>
-                    <td>固定列</td>
-                    <td class="fixedColumn"></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>     
+                </tr>
                 <tr>
                     <td>固定列</td>
                     <td class="fixedColumn"></td>
@@ -403,51 +400,7 @@
                     <td>5</td>
                     <td>6</td>
                     <td>7</td>
-                </tr>       
-                    <tr>
-                    <td>固定列</td>
-                    <td class="fixedColumn"></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>       
-                    <tr>
-                    <td>固定列</td>
-                    <td class="fixedColumn"></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>       
-                    <tr>
-                    <td>固定列</td>
-                    <td class="fixedColumn"></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>       
-                    <tr>
-                    <td>固定列</td>
-                    <td class="fixedColumn"></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>     
+                </tr>
                 <tr>
                     <td>固定列</td>
                     <td class="fixedColumn"></td>
@@ -458,24 +411,45 @@
                     <td>5</td>
                     <td>6</td>
                     <td>7</td>
-                </tr>       
-            </table>       
-        </div>   
-    </body>
+                </tr>
+                <tr>
+                    <td>固定列</td>
+                    <td class="fixedColumn"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>固定列</td>
+                    <td class="fixedColumn"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>固定列</td>
+                    <td class="fixedColumn"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>    function myVue() { this.aaa = 'aaa'; } myVue.prototype.attr = "attr"    var newVue = new myVue(); myVue.prototype.xin = 'xin'; console.log(newVue.__proto__); console.log(myVue.prototype); console.log(myVue);    // newVue.prototype.attr='attr';    // console.log(newVue.prototype);    // console.log(myVue.__proto__);    // console.log(newVue.propertype);</script>
 
-    </html>
-    </script>
-    <script>    
-        function myVue() { this.aaa = 'aaa'; } myVue.prototype.attr = "attr"
-        var newVue = new myVue();
-        myVue.prototype.xin = 'xin';
-        console.log(newVue.__proto__);
-        console.log(myVue.prototype);
-        console.log(myVue);
-    // newVue.prototype.attr='attr';
-    // console.log(newVue.prototype);    
-    // console.log(myVue.__proto__);    
-    // console.log(newVue.propertype);
-    </script>
+</body>
 
 </html>
