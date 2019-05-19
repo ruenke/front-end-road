@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>absolute</title>
+		<style type="text/css">
+			body {
+				/* border: 1px solid blue; */
+			}
+			* {
+				padding: 0px;
+				margin: 0px;
+			}
+			.test {
+				width: 100px;
+				height: 100px;
+				position: absolute;
+			}
+			.test0 {
+				right: 70px;
+				top: 50px;
+				background: red;
+				z-index: 1;
+			}
+			.test1 {
+				right: 80px;
+				top: 60px;
+				background:yellow;
+				z-index: 2;
+			}
+			.test2 {
+				right: 90px;
+				top: 70px;
+				background: aqua;
+			}
+			.pre {
+				width: 150px;
+				height: 150px;
+				background: blue;
+				position: absolute;
+				left: 100px;
+				top: 0px;
+				z-index: 1;
+			}
+			.rela {
+				width: 100px;
+				height: 100px;
+			}
+			.rela1 {
+				background: purple;
+				position: relative;
+				z-index: 1;
+			}
+			.rela2 {
+				background: orange;
+				position: relative;
+				left: 50px;
+				top: -50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="pre">
+			<!-- <div class="test test0">red</div>
+			<div class="test test1">yellow</div>
+			<div class="test test2">aqua</div> -->
+		</div>
+		<div class="rela rela1"></div>
+		<div class="rela rela2"></div>
+		
+	</body>
+</html>

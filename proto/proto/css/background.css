@@ -1,0 +1,12 @@
+.div1{
+	padding: 10px;
+	border: 10px solid red;
+	background-color: #008000;
+	background-image: url(../image/timg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 100px 200px;
+	background-clip: border-box;
+	background-origin: border-box;
+	background-size: 300px 500px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 90vw;
+            height: 30vh;
+            border: 1px solid red;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slide {
+            /* display: none; */
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+        .s0 {
+            position: absolute;
+            left: -100%;
+            top: 0;
+        }
+        .s1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .s2 {
+            position: absolute;
+            left: 100%;
+            top: 0;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script src="../../js/hammer.min.js"></script>
+    <script>
+        var tempArr = [];
+        var slides = [];
+        function genEle() {
+            for (var i = 0; i < 3; i++) {
+                var box = document.getElementById("box");
+                var div = document.createElement("div");
+                div.className = "slide s" + i;
+                var img = document.createElement("img");
+                img.src = "../../imgs/" + tempArr[i].src;
+                div.appendChild(img);
+                box.appendChild(div);
+            }
+            slides = document.getElementsByClassName("slide");
+        }
+
+        onload = function () {
+            var arr = [
+                {
+                    index: 0,
+                    src: "4.jpg",
+                    show: false
+                },
+                {
+                    index: 1,
+                    src: "3.jpg",
+                    show: false
+                },
+                {
+                    index: 2,
+                    src: "2.jpg",
+                    show: false
+                },
+                {
+                    index: 3,
+                    src: "1.jpg",
+                    show: true
+                }
+            ];
+            tempArr.push(arr[2], arr[3], arr[0]);
+            genEle();
+
+            const hammertime = new Hammer(box, { domEvents: true })
+            hammertime.on('swipeleft', function (e) {
+                slides[1].style.transform = "translateX(-100%)";
+                slides[2].style.transform = "translateX(-100%)";
+            });
+            hammertime.on('swiperight', function (e) {
+                slides[1].style.transform = "translateX(100%)";
+                slides[0].style.transform = "translateX(100%)";
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div id="box">
+    </div>
+</body>
+
+</html>
