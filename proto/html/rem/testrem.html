@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>rem</title>
+    <style>
+        html {
+            font-size: 20px;
+        }
+        .box {
+            width: 10rem;
+            height: 10rem;
+            background-color: red;
+        }
+        .txt {
+            color: #fff;
+            font-size: 1rem;
+        }
+        /* @media screen and (max-width: 360px) and (min-width: 321px) {
+            html {
+                font-size: 20px;
+            }
+        }
+        @media screen and (max-width: 320px) {
+            html {
+                font-size: 24px;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="txt">hello rem</p>
+    </div>
+    <script>
+        //获取视窗宽度
+        let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        console.log(htmlWidth);
+        let htmlDom = document.getElementsByTagName('html')[0];
+        htmlDom.style.fontSize = htmlWidth / 10 + 'px';
+    </script>
+</body>
+</html>

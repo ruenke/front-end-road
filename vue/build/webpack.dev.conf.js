@@ -9,8 +9,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
-//监控-why
-const WatcherPlugin = require('@mfs/watcher')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -60,11 +58,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       filename: 'index.html',
       template: 'index.html',
       inject: true
-    }),
-    //监控-why
-    new WatcherPlugin({
-      project: 'lingxi_h5',
-      env: ''
     }),
     // copy custom static assets
     new CopyWebpackPlugin([

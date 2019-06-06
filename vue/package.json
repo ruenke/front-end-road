@@ -11,8 +11,6 @@
     "devlop": "node build/build.js --buildEnv=test"
   },
   "dependencies": {
-    "@mfs/mf-watermark": "^1.0.16",
-    "@mfs/watcher": "^1.2.10",
     "axios": "^0.18.0",
     "babel-preset-es2015": "^6.24.1",
     "echarts": "^4.1.0",
