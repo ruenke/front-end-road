@@ -1,0 +1,27 @@
+body, div, dl, dt,ul,li,h1,h2,h3,h4,h5,h6,p,input,form,a,textarea {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif
+}
+ol,ul,li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+img {
+    border: none;
+    display: block;
+}
+.clearfloat {
+    zoom: 1
+}
+.clearfloat::before {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
